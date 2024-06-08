@@ -29,7 +29,6 @@ app.get('/', function (req, res) {
     })
 });
 
-
 app.post('/getkhachmoi', async function (req, res) {
     console.log("Co khach moi truy cap")
     try {
