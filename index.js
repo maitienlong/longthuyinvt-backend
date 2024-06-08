@@ -5,8 +5,6 @@ const mongoose = require('mongoose');
 var cors = require('cors')
 mongoose.Promise = require('bluebird');
 var app = express();
-const uri = "mongodb+srv://hilongwedding:RNOk9QN6lQKVq5Ws@longwedding.c9mhpew.mongodb.net/longthuywedding";
-
 const loichucSchema = require('./model/loichuc');
 const khachmoiSchema = require('./model/khachmoi');
 
@@ -15,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect(process.env.MONGGO_URI || uri, { useNewUrlParser: true })
+mongoose.connect(process.env.MONGGO_URI || "mongodb+srv://hilongwedding:RNOk9QN6lQKVq5Ws@longwedding.c9mhpew.mongodb.net/longthuywedding", { useNewUrlParser: true })
 const db = mongoose.connection
 
 db.on('error', (error) => console.error(error))
