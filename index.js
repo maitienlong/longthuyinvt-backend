@@ -24,6 +24,14 @@ db.once('open', () => {
 });
 
 
+app.get('/', function (req, res) {
+    res.json({
+        status: 0,
+        msg: "Xin Chao"
+    })
+});
+
+
 app.post('/getkhachmoi', async function (req, res) {
     console.log("Co khach moi truy cap")
     try {
